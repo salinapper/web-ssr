@@ -1,0 +1,16 @@
+export default {
+  'charts.inflection': '拐点',
+  'charts.eventPrice': '大事件 & 价格',
+  'charts.btcgold.explain': '注：比特币比黄金要更好，这是最基础的基本面。所以，我们认为，比特币的市值，最终是要超过黄金市值的。但是现在比特币的市值，大约只有黄金市值的{percent}%，所以，如果比特币的市值和黄金市值持平的话，那么还有${times}倍的空间，那么一个币就是约${targetPrice}美金。',
+  'charts.btcgold.explain-1': '黄金价格数据来源 <a target="_blank" href="https://www.gold.org/">世界黄金议会(World Gold Council)</a>，BTC市值数据来源 <a target="_blank" href="https://coinmarketcap.com/">CoinMarketCap</a> <br />自2010年起黄金地面库存总量 168343.3 吨 <br />每日开采量约 8.6 吨 <br />1吨 = 35274盎司',
+  'charts.btcgold.explain-2': 'BTC/GOLD = BTC市值 / (黄金地面库存总量 * 35274 * 黄金价格)',
+  'charts.price/sma350.explain': '注：price/sma(350)可以用来描述投资者情绪的变化。当比值小于0.5的时候，可以认为投资者情绪表现为过度悲观，市场被暂时低估；当比值高于5的时候，可以认为投资者情绪表现为过度乐观，市场被暂时高估。通过这个比值，能相对容易识别出2011年、2015年、2018年的底部区间。',
+  'charts.sma1400.explain': '注：1400日均线预测使用了 ARIMA 模型（差分整合移动平均自回归模型）',
+  'charts.sma1400.explain-1': '1、在传统股票市场中，200日均线可视为牛熊分界线，运行在200日均线之上，为牛市，运行在200日均线之下，为熊市；',
+  'charts.sma1400.explain-2': '2、350日均线即50周均线，可代表年平均表现，提供了重要的支撑和阻力位置；',
+  'charts.sma1400.explain-3': '3、1400日均线即200周均线，可代表btc的相对底部标准，其在2015年和2019年都提供了完美的支撑。',
+  'charts.dailyTransactions.explain': '链上交易数量可以视为比特币网络使用度的标准之一。在2019年5月，链上交易数量的200日均线已经突破前高，这代表着比特币网络的使用程度达到了新的高度。',
+  'charts.linreg.up': '上通道宽度',
+  'charts.linreg.down': '下通道宽度',
+  'charts.linreg.count': '时间范围',
+}

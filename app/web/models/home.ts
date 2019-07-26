@@ -1,5 +1,8 @@
 import { Model } from 'dva';
 import { queryRestaurantData } from '@/services/home';
+console.log('##################')
+console.log(process)
+// console.log('##################')
 
 const HomeModel: Model = {
   namespace: 'home',
@@ -28,7 +31,8 @@ const HomeModel: Model = {
     },
   },
   reducers: {
-    saveRests(state, { payload }) {
+    saveRests(state, action) {
+      const payload = action['payload'];
       if (state.rests.length > 0) {
         state.rests = state.rests.concat(payload.items || []);
       } else {
@@ -36,8 +40,8 @@ const HomeModel: Model = {
       }
       state.rank_id = payload.meta.rank_id || '';
     },
-    changeCoords(state, { payload }) {
-      state.coords = payload;
+    changeCoords(state, action) {
+      state.coords = action['payload'];
     },
   },
 };

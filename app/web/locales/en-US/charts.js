@@ -1,0 +1,16 @@
+export default {
+  'charts.inflection': 'Inflection point',
+  'charts.eventPrice': 'Event & Price',
+  'charts.btcgold.explain': '* Bitcoin is better than gold. This is the most basic fundamental. Therefore, we believe that Bitcoin will eventually exceed gold in terms of market value. The current market value of Bitcoin, however, is only {percent}% of that of gold. In other words, the price of Bitcoin needs to grow {timesPercent}% so that Bitcoin will have the same market value as gold. By then, one Bitcoin will cost ${targetPrice}.',
+  'charts.btcgold.explain-1': 'Data source: gold price - <a target="_blank" href="https://www.gold.org/">World Gold Council</a> ,  BTC market cap - <a target="_blank" href="https://coinmarketcap.com/">CoinMarketCap</a> . <br />Total above-ground stock of gold: 168343.3 tonnes <br />Daily gold mining production 8.6 tonnes <br />1 tonne = 35274 ounces',
+  'charts.btcgold.explain-2': 'BTC/GOLD = BTC_Marketcap / (Glod_Supply_Volum * 35274 * Gold_Price )',
+  'charts.price/sma350.explain': '* Price/SMA (350) signals the change of market sentiment. When the ratio is under 0.5, the market sentiment is overly pessimistic; when the ratio is above 5, the market sentiment is overly optimistic and the market is overvalued. The bottom area during the years of 2011, 2015 and 2018 can be easily identified through the ratio.',
+  'charts.sma1400.explain': '* SMA1400 prediction using ARIMA Model (Autoregressive integrated moving average)',
+  'charts.sma1400.explain-1': '1. In traditional stock market, the 200-day Moving Average can be seen as the dividing line between the bear market and the bull market. It’s a bull market when the price is above the 200-day Moving Average and it’s a bear market when the price is below the 200-day Moving Average.',
+  'charts.sma1400.explain-2': '2. The 350-day Moving Average, aka the 50-week Moving Average, shows the average performance during a year. It is an important support and resistance line.',
+  'charts.sma1400.explain-3': '3. The 1400-day Moving Average, aka the 200-week Moving Average, represents the relative bottom standard of Bitcoin. It offered perfect support in both 2015 and 2019.',
+  'charts.dailyTransactions.explain': 'The on-chain transaction volume can be regarded as a measure of the usage of bitcoin network. In May 2019, the 200-day Moving Average of the on-chain transaction volume reached a record high, which means the usage of bitcoin network set a new high.',
+  'charts.linreg.up': 'Upper Deviation',
+  'charts.linreg.down': 'Lower Deviation',
+  'charts.linreg.count': 'Range',
+}

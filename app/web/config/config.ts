@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { IConfig } from 'umi-types';
+import routes from './router.config';
 
 const config: IConfig = {
   ssr: true,
@@ -26,6 +27,10 @@ const config: IConfig = {
   runtimePublicPath: true,
   disableCSSModules: true,
   cssModulesWithAffix: true,
+  routes,
+  define: {
+    APP_TYPE: process.env.APP_TYPE || '',
+  },
 };
 
 export default config;

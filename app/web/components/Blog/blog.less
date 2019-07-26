@@ -1,0 +1,76 @@
+.blogItem {
+  height: 280px;
+  background-color: lighten(#050a21, 2%);
+  margin: 0 auto 30px;
+  border: 1px solid fadeout(white, 92%);
+  .banner {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 125px;
+  }
+  .placeholder {
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    background: fadeout(white, 60%) url('../../assets/logo-white.png') center center / 118px 25px no-repeat;
+  }
+  .screenshot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, fadeout(black, 80%), fadeout(black, 30%));
+    background-size: 100% 100%;
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    font-family: 'DIN Alternate', 'Arial';
+    padding-left: 15px;
+    width: 100%;
+    color: fadeout(white, 15%);
+  }
+  .title {
+    color: rgba(255,255,255,.85);
+    margin: 15px 15px 10px;
+    font-size: 20px;
+    line-height: 28px;
+    height: 56px;
+    overflow: hidden;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+  }
+  .titleWrap {
+    max-height: 56px;
+    overflow: hidden;
+  }
+  .date {
+    color: rgba(255,255,255,.65);
+    padding: 0 15px 10px;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 15px;
+    height: 21px;
+    overflow: hidden;
+    .tag {
+      color: fadeout(#00EBE9, 40%);
+      white-space: nowrap;
+      display: inline-block;
+      line-height: 21px;
+      margin-right: 16px;
+    }
+  }
+}

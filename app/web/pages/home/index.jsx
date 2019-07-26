@@ -152,7 +152,8 @@ class Home extends React.Component {
   }
 
   gotoDetail = data => {
-    const { coords } = this.state;
+    const { coords } = this.props;
+    console.log(this.props)
     router.push({
       pathname: '/shop',
       query: {

@@ -1,8 +1,7 @@
-
-
 const { Controller } = require('egg');
 const { join } = require('path');
 const restaurants = require('../data/restaurants.json');
+const request = require('umi-request');
 
 class HomeController extends Controller {
   constructor(ctx) {
@@ -27,6 +26,10 @@ class HomeController extends Controller {
         href: `${serverHost}${ctx.request.url}`,
         pathname: ctx.path,
       },
+      matchMedia: () => ({
+        addListener: () => {}, 
+        removeListener: () => {} 
+      })
     };
 
     // eslint-disable-next-line
@@ -53,13 +56,14 @@ class HomeController extends Controller {
 
   async api() {
     const { ctx } = this;
+    
     if (ctx.path.indexOf('restaurants') > -1) {
       ctx.status = 200;
       ctx.body = restaurants;
       return false;
     }
 
-    const url = `https://h5.ele.me${ctx.path.replace(/^\/api/, '')}?${ctx.querystring}`;
+    const url = `http://medivh.dev.csiodev.com${ctx.path}?${ctx.querystring}`;
 
     console.log(url);
     const res = await this.ctx.curl(url, {
