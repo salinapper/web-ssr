@@ -13,9 +13,11 @@ import styles from './index.module.less';
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    /*
     if (window.location && window.location.pathname.indexOf('/home') < 0) {
       router.replace('/home');
     }
+    */
   }
 
   state = {

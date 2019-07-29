@@ -1,5 +1,9 @@
 export default [
   {
+    path: '/wtf',
+    component: './Blog',
+  },
+  {
     path: '/share',
     component: '../layouts/BlankLayout',
     routes: [

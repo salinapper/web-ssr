@@ -8,7 +8,7 @@ import { formatMessage } from 'umi/locale';
 import moment from 'moment';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import BlogItem from '@/components/Blog/Item';
-import styles from './index.less';
+import styles from './index.module.less';
 
 @connect(({ blog, loading }) => ({
   ...blog,

@@ -47,8 +47,10 @@ const query = {
 class BasicLayout extends React.PureComponent {
   constructor(props) {
     super(props);
+    /*
     this.getPageTitle = memoizeOne(this.getPageTitle);
     this.matchParamsPath = memoizeOne(this.matchParamsPath, isEqual);
+    */
   }
 
   componentDidMount() {
@@ -69,6 +71,7 @@ class BasicLayout extends React.PureComponent {
   }
 
   componentDidUpdate(preProps) {
+    console.log('update!-----------')
     // After changing to phone mode,
     // if collapsed is true, you need to click twice to display
     const { collapsed, isMobile, location } = this.props;
@@ -191,7 +194,7 @@ class BasicLayout extends React.PureComponent {
     );
     return (
       <React.Fragment>
-        <DocumentTitle title={this.getPageTitle(pathname, breadcrumbNameMap)}>
+        {/* <DocumentTitle title={this.getPageTitle(pathname, breadcrumbNameMap)}> */}
           <ContainerQuery query={query}>
             {params => (
               <Context.Provider value={this.getContext()}>
@@ -199,7 +202,7 @@ class BasicLayout extends React.PureComponent {
               </Context.Provider>
             )}
           </ContainerQuery>
-        </DocumentTitle>
+        {/* </DocumentTitle> */}
       </React.Fragment>
     );
   }
@@ -211,8 +214,10 @@ export default connect(({ global, setting, menu }) => ({
   menuData: menu.menuData,
   breadcrumbNameMap: menu.breadcrumbNameMap,
   ...setting,
-}))(props => (
-  <Media query="(max-width: 599px)">
-    {isMobile => <BasicLayout {...props} isMobile={isMobile} />}
-  </Media>
-));
+}))(BasicLayout);
+
+// (props => (
+//   <Media query="(max-width: 599px)">
+//     {isMobile => <BasicLayout {...props} isMobile={isMobile} />}
+//   </Media>
+// ));

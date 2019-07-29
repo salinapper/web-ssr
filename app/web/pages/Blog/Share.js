@@ -7,7 +7,7 @@ import { formatMessage } from 'umi/locale';
 import { leftpad } from '@/utils/utils';
 import moment from 'moment';
 import logo from '../../assets/share-logo.png';
-import styles from './index.less';
+import styles from './index.module.less';
 import { markdown } from './markdown.less';
 
 @connect(({ blog, loading }) => ({

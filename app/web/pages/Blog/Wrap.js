@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import Link from 'umi/link';
-import PageHeaderWrapper from '@/components/PageHeaderWrapper';
-import Markdown from 'react-markdown';
-import { Card, Spin, Divider } from 'antd';
 import { connect } from 'dva';
-import { formatMessage } from 'umi/locale';
-import moment from 'moment';
-import styles from './index.less';
 
 @connect(({ blog, loading }) => ({
   ...blog,
