@@ -1,4 +1,4 @@
-import { routerRedux } from 'dva/router';
+import { routerRedux } from 'dva';
 import { stringify } from 'qs';
 import { userLogin, getCaptcha } from '@/services/user';
 import { setAuthority, clearAuthority } from '@/utils/authority';

@@ -1,8 +1,5 @@
 import { Model } from 'dva';
 import { queryRestaurantData } from '@/services/home';
-console.log('##################')
-console.log(process)
-// console.log('##################')
 
 const HomeModel: Model = {
   namespace: 'home',

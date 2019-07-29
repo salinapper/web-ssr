@@ -71,7 +71,6 @@ class BasicLayout extends React.PureComponent {
   }
 
   componentDidUpdate(preProps) {
-    console.log('update!-----------')
     // After changing to phone mode,
     // if collapsed is true, you need to click twice to display
     const { collapsed, isMobile, location } = this.props;
@@ -214,10 +213,8 @@ export default connect(({ global, setting, menu }) => ({
   menuData: menu.menuData,
   breadcrumbNameMap: menu.breadcrumbNameMap,
   ...setting,
-}))(BasicLayout);
-
-// (props => (
-//   <Media query="(max-width: 599px)">
-//     {isMobile => <BasicLayout {...props} isMobile={isMobile} />}
-//   </Media>
-// ));
+}))(props => (
+  <Media query="(max-width: 599px)">
+    {isMobile => <BasicLayout {...props} isMobile={isMobile} />}
+  </Media>
+));

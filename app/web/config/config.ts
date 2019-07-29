@@ -1,6 +1,7 @@
 import { join } from 'path';
 import { IConfig } from 'umi-types';
 import routes from './router.config';
+import theme from './theme';
 
 const config: IConfig = {
   ssr: true,
@@ -28,6 +29,7 @@ const config: IConfig = {
   disableCSSModules: true,
   cssModulesWithAffix: true,
   routes,
+  theme,
   define: {
     APP_TYPE: process.env.APP_TYPE || '',
   },
