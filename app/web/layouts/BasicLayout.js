@@ -194,7 +194,7 @@ class BasicLayout extends React.PureComponent {
     );
     return (
       <React.Fragment>
-        {/* <DocumentTitle title={this.getPageTitle(pathname, breadcrumbNameMap)}> */}
+        <DocumentTitle title={this.getPageTitle(pathname, breadcrumbNameMap)}>
           <ContainerQuery query={query}>
             {params => (
               <Context.Provider value={this.getContext()}>
@@ -202,7 +202,7 @@ class BasicLayout extends React.PureComponent {
               </Context.Provider>
             )}
           </ContainerQuery>
-        {/* </DocumentTitle> */}
+        </DocumentTitle>
       </React.Fragment>
     );
   }

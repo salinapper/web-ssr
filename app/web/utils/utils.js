@@ -221,6 +221,9 @@ export function predictSMA(sma, sampleStart, predictDuration) {
 
 export const cookie = {
   set (name, value, days) {
+    if (!window.document) {
+      return false
+    }
     cookie.remove(name)
     let expires = ''
     if (days) {
@@ -231,6 +234,9 @@ export const cookie = {
     document.cookie = name + '=' + (value || '') + expires + '; path=/;'
   },
   get (name) {
+    if (!window.document) {
+      return false
+    }
     const nameEQ = name + '='
     const ca = document.cookie.split(';')
     for (let i = 0; i < ca.length; i += 1) {
@@ -245,6 +251,9 @@ export const cookie = {
     return null
   },
   remove (name) {
+    if (!window.document) {
+      return false
+    }
     document.cookie = name + '=; Max-Age=-99999999;'
     document.cookie = name + '=; Max-Age=-99999999;'
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Link from 'umi/link';
 import moment from 'moment';
 import _ from 'lodash';
-import styles from './blog.less';
+import styles from './blog.module.less';
 
 class BlogItem extends Component {
 

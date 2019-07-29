@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Radio } from 'antd';
-import styles from './index.less';
+import styles from './index.module.less';
 
 class ZoomButton extends Component {
 

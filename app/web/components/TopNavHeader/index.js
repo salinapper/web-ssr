@@ -3,7 +3,7 @@ import Link from 'umi/link';
 import RightContent from '../GlobalHeader/RightContent';
 import BaseMenu from '../SiderMenu/BaseMenu';
 import { getFlatMenuKeys } from '../SiderMenu/SiderMenuUtils';
-import styles from './index.less';
+import styles from './index.module.less';
 console.log(styles)
 
 export default class TopNavHeader extends PureComponent {

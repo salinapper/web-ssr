@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import styles from './index.less';
+import styles from './index.module.less';
 
 export default class ASIC extends PureComponent {
   render() {

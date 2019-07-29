@@ -9,12 +9,11 @@ import { leftpad } from '@/utils/utils';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import BlogItem from '@/components/Blog/Item';
 import styles from './index.module.less';
-import { markdown } from './markdown.less';
+import { markdown } from './markdown.module.less';
 
 class BlogPage extends Component {
 
   componentDidMount() {
-    console.log('----------DidMount');
     this.props.dispatch({
       type: 'blog/fetch',
       payload: {
@@ -23,7 +22,6 @@ class BlogPage extends Component {
     });
   }
   componentWillReceiveProps(newProps) {
-    console.log('----------WillReceiveProps');
     if (this.props.match.params.id !== newProps.match.params.id) {
       this.props.dispatch({
         type: 'blog/fetch',
@@ -37,7 +35,6 @@ class BlogPage extends Component {
   render() {
     const { detail, relation, loading } = this.props
     const date = moment(detail.published_at)
-    console.log('----------render');
     return (
       <PageHeaderWrapper>
         <Card className={styles.blogCard} bordered={false}>
@@ -82,11 +79,6 @@ class BlogPage extends Component {
     );
   }
 }
-
-BlogPage.getInitialProps = async ({ route, store, isServer }) => {
-  console.log('---getInitialProps-', route, store, isServer);
-  return Promise.resolve({initialProps: 'xixi'});
-};
 
 export default connect(({ blog, loading }) => ({
   ...blog,

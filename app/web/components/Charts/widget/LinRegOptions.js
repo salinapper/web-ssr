@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { InputNumber, Button } from 'antd';
 import { formatMessage } from 'umi/locale';
-import styles from './index.less';
+import styles from './index.module.less';
 
 export default class ScaleType extends Component {
   constructor() {

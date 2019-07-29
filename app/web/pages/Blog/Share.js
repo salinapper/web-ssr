@@ -8,7 +8,7 @@ import { leftpad } from '@/utils/utils';
 import moment from 'moment';
 import logo from '../../assets/share-logo.png';
 import styles from './index.module.less';
-import { markdown } from './markdown.less';
+import { markdown } from './markdown.module.less';
 
 @connect(({ blog, loading }) => ({
   ...blog,

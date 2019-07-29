@@ -6,7 +6,7 @@ import groupBy from 'lodash/groupBy';
 import HeaderDropdown from '../HeaderDropdown';
 import SelectLang from '../SelectLang';
 import Gravatar from '../Gravatar';
-import styles from './index.less';
+import styles from './index.module.less';
 
 export default class GlobalHeaderRight extends PureComponent {
   getNoticeData() {

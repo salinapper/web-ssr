@@ -1,7 +1,7 @@
 import React, { PureComponent, createElement } from 'react';
 import pathToRegexp from 'path-to-regexp';
 import { Breadcrumb } from 'antd';
-import styles from './index.less';
+import styles from './index.module.less';
 import { urlToList } from '../_utils/pathTools';
 
 export const getBreadcrumb = (breadcrumbNameMap, url) => {

@@ -4,7 +4,7 @@ import { cookie } from '@/utils/utils';
 import { Menu, Icon } from 'antd';
 import classNames from 'classnames';
 import HeaderDropdown from '../HeaderDropdown';
-import styles from './index.less';
+import styles from './index.module.less';
 
 function setHomepageLocale(key) {
   if (key === 'zh-CN') {

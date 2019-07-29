@@ -2,12 +2,12 @@ import React, { PureComponent, Suspense } from 'react';
 import { Layout, Icon } from 'antd';
 import classNames from 'classnames';
 import Link from 'umi/link';
-import styles from './index.less';
+import styles from './index.module.less';
 import PageLoading from '../PageLoading';
 import { formatMessage } from 'umi/locale';
 import { getDefaultCollapsedSubMenus } from './SiderMenuUtils';
+import BaseMenu from './BaseMenu';
 
-const BaseMenu = React.lazy(() => import('./BaseMenu'));
 const { Sider } = Layout;
 
 export default class SiderMenu extends PureComponent {
@@ -73,7 +73,7 @@ export default class SiderMenu extends PureComponent {
           </a>
         </div>
         <Link key="blog" to={'/blog/detail'} className={styles.bloglink + ' bloglink'}><span>{ formatMessage({id: 'menu.blog'}) }</span></Link>
-        <Suspense fallback={<PageLoading />}>
+        {/* <Suspense fallback={<PageLoading />}> */}
           <BaseMenu
             {...this.props}
             mode="inline"
@@ -82,7 +82,7 @@ export default class SiderMenu extends PureComponent {
             style={{ padding: '0 0 16px 0', width: '100%' }}
             {...defaultProps}
           />
-        </Suspense>
+        {/* </Suspense> */}
       </Sider>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Spin, Calendar, Row, Col, Card } from 'antd';
 import moment from 'moment';
 import { formatMessage } from 'umi/locale';
-import styles from './Calendar.less';
+import styles from './Calendar.module.less';
 
 class EventCalendar extends Component {
 

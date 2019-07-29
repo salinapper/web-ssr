@@ -5,7 +5,7 @@ import Link from 'umi/link';
 import { urlToList } from '../_utils/pathTools';
 import { getMenuMatches } from './SiderMenuUtils';
 import { isUrl } from '@/utils/utils';
-import styles from './index.less';
+import styles from './index.module.less';
 
 const { SubMenu } = Menu;
 
